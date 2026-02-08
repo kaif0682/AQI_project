@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="prediction-form">
+    <div class="container">
+        <h1>AQI Prediction</h1>
+        <p>Enter the pollutant concentrations to predict the Air Quality Index</p>
+        
+        <form method="post" class="prediction-form-container">
+            {% csrf_token %}
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="{{ form.pm25.id_for_label }}">{{ form.pm25.label }}</label>
+                    {{ form.pm25 }}
+                    {% if form.pm25.errors %}
+                        <div class="error">{{ form.pm25.errors }}</div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    <label for="{{ form.pm10.id_for_label }}">{{ form.pm10.label }}</label>
+                    {{ form.pm10 }}
+                    {% if form.pm10.errors %}
+                        <div class="error">{{ form.pm10.errors }}</div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    <label for="{{ form.no2.id_for_label }}">{{ form.no2.label }}</label>
+                    {{ form.no2 }}
+                    {% if form.no2.errors %}
+                        <div class="error">{{ form.no2.errors }}</div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    <label for="{{ form.so2.id_for_label }}">{{ form.so2.label }}</label>
+                    {{ form.so2 }}
+                    {% if form.so2.errors %}
+                        <div class="error">{{ form.so2.errors }}</div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    <label for="{{ form.co.id_for_label }}">{{ form.co.label }}</label>
+                    {{ form.co }}
+                    {% if form.co.errors %}
+                        <div class="error">{{ form.co.errors }}</div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    <label for="{{ form.o3.id_for_label }}">{{ form.o3.label }}</label>
+                    {{ form.o3 }}
+                    {% if form.o3.errors %}
+                        <div class="error">{{ form.o3.errors }}</div>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-primary">Predict AQI</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

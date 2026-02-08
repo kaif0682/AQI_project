@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Air Quality Index Prediction</h1>
+        <p>Predict the Air Quality Index using machine learning algorithms based on pollutant concentrations</p>
+        <a href="{% url 'prediction' %}" class="btn-primary">Get Prediction</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Accurate Predictions</h3>
+                <p>Utilizes Random Forest algorithm trained on historical air quality data</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Real-time Analysis</h3>
+                <p>Get instant AQI predictions based on current pollutant levels</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Comprehensive Metrics</h3>
+                <p>Analyze multiple pollutants including PM2.5, PM10, NO2, SO2, CO, and O3</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="aqi-categories">
+    <div class="container">
+        <h2>AQI Categories</h2>
+        <div class="categories-grid">
+            <div class="category-card good">
+                <h3>Good (0-50)</h3>
+                <p>Air quality is satisfactory, and air pollution poses little or no risk.</p>
+            </div>
+            <div class="category-card moderate">
+                <h3>Moderate (51-100)</h3>
+                <p>Air quality is acceptable. However, there may be a risk for some people.</p>
+            </div>
+            <div class="category-card unhealthy-sensitive">
+                <h3>Unhealthy for Sensitive Groups (101-150)</h3>
+                <p>Members of sensitive groups may experience health effects.</p>
+            </div>
+            <div class="category-card unhealthy">
+                <h3>Unhealthy (151-200)</h3>
+                <p>Some members of the general public may experience health effects.</p>
+            </div>
+            <div class="category-card very-unhealthy">
+                <h3>Very Unhealthy (201-300)</h3>
+                <p>Health alert: The risk of health effects is increased for everyone.</p>
+            </div>
+            <div class="category-card hazardous">
+                <h3>Hazardous (301+)</h3>
+                <p>Health warning of emergency conditions: everyone is more likely to be affected.</p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+{% endblock %}
