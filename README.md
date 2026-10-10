@@ -160,9 +160,6 @@ If the serialized model files are missing or cannot be loaded, the app falls bac
 - Submit the form to view the AQI result.
 - Use the "Make Another Prediction" button to return to the prediction page.
 
-## Screenshots and demos
-
-No screenshots, deployment links, or external demo URLs were found in the repository. The project is primarily structured as a local Django application for development and testing.
 
 ## Notebook and model files
 
@@ -195,7 +192,6 @@ Please keep changes focused and avoid modifying unrelated files.
 
 ## License
 
-No license file was found in this repository. If the project is intended for public distribution or team use, add an appropriate open-source license before publishing it externally.
 
 ## Notes
 
